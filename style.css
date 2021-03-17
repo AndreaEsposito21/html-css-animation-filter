@@ -31,6 +31,12 @@
     width: 100px;
     height: 100px;
     background: red;
+
+    transition: 3s;
+}
+
+.ex-3-square:hover {
+    border-radius: 50%;
 }
 /* End Es-3 */
 
@@ -39,6 +45,12 @@
     width: 100px;
     height: 100px;
     background: red;
+
+    transition: 2s;
+}
+
+.ex-4-square:hover {
+    opacity: 0;
 }
 /* End Es-4 */
 
@@ -48,12 +60,46 @@
     width: 60px;
     height: 60px;
     background: red;
+
+    transition: 2s;
+}
+
+.ex-5-square:hover {
+    transform: scale(2);
+}
+
+.ex-5-square:active {
+    transform: scale(0.5);
 }
 /* End Es-5 */
 
 /* Es-6-7-8 */
+/* Es-6 */
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+}
+
+.ex-6-img:hover {
+    filter: grayscale(100%);
+}
+
+/* Es-7 */
+.ex-7-img {
+    transition: 2s;
+}
+
+.ex-7-img:hover {
+    filter: grayscale(50%) sepia(50%);
+}
+
+/* Es-8 */
+.ex-8-img {
+    transition: 2s;
+}
+
+.ex-8-img:hover {
+    filter: grayscale(40%) sepia(60%);
+    border-radius: 15px;
 }
 /* End Es-6-7-8 */
 
@@ -61,18 +107,63 @@
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+
+    transition: 2s;
+}
+
+.ex-9-img:hover {
+    filter: grayscale(50%) sepia(50%);
+    border-radius: 15px;
+    transform: scale(1.5);
 }
 /* End Es-9 */
 
 /* Es-10 */
 .ex-10-icon {
     font-size: 60px;
+
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(1turn);
+    }
 }
 /* End Es-10 */
 
 /* Es-11 */
 .ex-11-icon {
     font-size: 60px;
+}
+
+.ex-11-icon:hover {
+    animation: halfloading 2s linear;
+}
+
+@keyframes halfloading {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(315deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
 }
 /* End Es-11 */
 
@@ -105,5 +196,115 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+/* Es-12 */
+.ex-12-button:hover .ex-12-top-white{
+    animation: twelve-top 2s linear;
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: twelve-bot 2s linear;
+}
+
+@keyframes twelve-top {
+    0% {
+        left: 10%;
+    }
+
+    50% {
+        left: calc( 100% - 60px );
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes twelve-bot {
+    0% {
+        right: 20%;
+    }
+
+    50% {
+        right: calc( 100% - 60px );
+    }
+
+    100% {
+        right: 20%;
+    }
+}
+
+/* ES-13 */
+.ex-13-button:hover .ex-13-top-white{
+    animation: thirteen-top 2s linear;
+}
+
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: thirteen-bot 2s linear;
+}
+
+@keyframes thirteen-top {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+
+    25% {
+        top: -10px;
+        left: calc(100% - 30px);
+    }
+
+    50% {
+        top: 100%;
+        left: calc(100% - 30px);
+    }
+
+    75% {
+        top: 100%;
+        left: 0;
+    }
+
+    90% {
+        top: -10px;
+        left: -5%;
+    }
+
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+@keyframes thirteen-bot {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+
+    25% {
+        bottom: -10px;
+        right: calc(100% - 30px);
+    }
+
+    50% {
+        bottom: 100%;
+        right: calc(100% - 30px);
+    }
+
+    75% {
+        bottom: 100%;
+        right: 0;
+    }
+
+    90% {
+        bottom: -10px;
+        right: -15px;
+    }
+
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
 }
 /* End Es-12-13 */
